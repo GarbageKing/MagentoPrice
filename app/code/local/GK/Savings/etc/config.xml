@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <GK_Savings>
+            <version>0.0.2</version>
+        </GK_Savings>
+    </modules>
+    <global>
+        <models>
+            <gk_savings>
+                <class>GK_Savings_Model</class>
+            </gk_savings>           
+        </models>
+<resources>
+    <GK_Savings_setup>
+      <setup>
+        <module>GK_Savings</module>
+        <class>Mage_Eav_Model_Entity_Setup</class>        
+      </setup>  
+      <connection>
+        <use>core_setup</use>
+      </connection>
+    </GK_Savings_setup>
+</resources>
+    </global>    
+    <frontend>
+        <routers>
+            <savings>
+                <use>standard</use>
+                <args>
+                    <module>GK_Savings</module>
+                    <frontName>saving</frontName>
+                </args>
+            </savings>
+        </routers>
+    </frontend>
+</config>
